@@ -13,13 +13,13 @@ namespace HowToExcel
             string dir = "C:/Users/User/Desktop/HowToExcel/Files/";
             //string nameDir = "C:/Users/User/Desktop/HowToExcel/Files/test.xlsx";
             //string nameDir = CreateRandomFile(dir);
-            string nameDir = dir + "maxim.xlsx";
+            string nameDir = dir + "source.xlsx";
 
             byte[] tableData;
             ExcelWork excelWork = new ExcelWork();
             using (FileStream fs = File.Open(nameDir, FileMode.OpenOrCreate))
             {
-                tableData = excelWork.Read(fs);
+                tableData = excelWork.ReadSberData(fs);
             }
 
             string editDir = dir + "maximEdit.xlsx";
