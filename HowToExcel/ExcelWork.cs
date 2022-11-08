@@ -77,7 +77,7 @@ namespace HowToExcel
             return package.GetAsByteArray();
         }
 
-        public byte[] ReadSimpleData(FileStream stream)
+        public void ReadSimpleData(FileStream stream)
         {
             var package = new ExcelPackage();
             package.Load(stream);
